@@ -7,6 +7,7 @@
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/appmus?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">root</property>
+    <property name="hibernate.connection.autocommit">false</property>
     <mapping resource="model/pojos/GeneroUsuario.hbm.xml"/>
     <mapping resource="model/pojos/GeneroCancion.hbm.xml"/>
     <mapping resource="model/pojos/Usuario.hbm.xml"/>

@@ -48,4 +48,9 @@ public class SessionBean {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+    public String limpiarSesion(){
+        this.usuario=new Usuario();
+        return "index";
+    }
 }
