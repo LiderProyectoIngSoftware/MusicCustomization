@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22/11/2012 12:12:03 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.pojos.Usuario" table="Usuario" catalog="appmus">
+        <id name="idUsuario" type="java.lang.Integer">
+            <column name="IdUsuario" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="Nombre" length="45" />
+        </property>
+        <property name="usuario" type="string">
+            <column name="Usuario" length="45" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="45" />
+        </property>
+        <set name="generoUsuarios" inverse="true">
+            <key>
+                <column name="IdUsuario" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="model.pojos.GeneroUsuario" />
+        </set>
+        <set name="historias" inverse="true">
+            <key>
+                <column name="IdUsuario" />
+            </key>
+            <one-to-many class="model.pojos.Historia" />
+        </set>
+    </class>
+</hibernate-mapping>

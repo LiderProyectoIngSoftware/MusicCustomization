@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 22/11/2012 12:12:03 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="model.pojos.GeneroUsuario" table="GeneroUsuario" catalog="appmus">
+        <id name="idUsuario" type="int">
+            <column name="IdUsuario" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="usuario" class="model.pojos.Usuario" update="false" insert="false" fetch="select">
+            <column name="IdUsuario" not-null="true" unique="true" />
+        </many-to-one>
+        <property name="rock" type="java.lang.Double">
+            <column name="Rock" precision="22" scale="0" />
+        </property>
+        <property name="pop" type="java.lang.Double">
+            <column name="Pop" precision="22" scale="0" />
+        </property>
+        <property name="reggae" type="java.lang.Double">
+            <column name="Reggae" precision="22" scale="0" />
+        </property>
+        <property name="reggaeton" type="java.lang.Double">
+            <column name="Reggaeton" precision="22" scale="0" />
+        </property>
+        <property name="merengue" type="java.lang.Double">
+            <column name="Merengue" precision="22" scale="0" />
+        </property>
+        <property name="salsa" type="java.lang.Double">
+            <column name="Salsa" precision="22" scale="0" />
+        </property>
+        <property name="cumbia" type="java.lang.Double">
+            <column name="Cumbia" precision="22" scale="0" />
+        </property>
+        <property name="clasica" type="java.lang.Double">
+            <column name="Clasica" precision="22" scale="0" />
+        </property>
+        <property name="jazz" type="java.lang.Double">
+            <column name="Jazz" precision="22" scale="0" />
+        </property>
+        <property name="metal" type="java.lang.Double">
+            <column name="Metal" precision="22" scale="0" />
+        </property>
+        <property name="samba" type="java.lang.Double">
+            <column name="Samba" precision="22" scale="0" />
+        </property>
+        <property name="disco" type="java.lang.Double">
+            <column name="Disco" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

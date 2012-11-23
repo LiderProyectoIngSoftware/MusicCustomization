@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>TODO supply a title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <h:commandButton value="Salir" action="index"/>
+        </h:form>
+        <h:panelGrid columns="4">
+
+            <h:form>
+                <h:outputText value="Canciones"/>
+                <h:selectOneMenu value="${principalBean.idCancionElegida}">
+                    <f:selectItem itemValue="-1" itemLabel="--Seleccione--"/> 
+                    <f:selectItems value="${principalBean.canciones}" var="cancion" itemValue="${cancion.idCancion}" itemLabel="${cancion.nombre}-${cancion.artista}"/>
+                </h:selectOneMenu>
+
+                <h:commandButton  value="Escuchar" action="${principalBean.escucharCancion}"/>
+                
+            </h:form>
+        </h:panelGrid>
+        <h:panelGrid columns="2">
+            <h:outputText value="Historial"/>
+                <h:dataTable value="${principalBean.cancionesHistorial}" var="hist" border="1">
+                    <h:column>
+                        <h:outputText value="${hist.nombre}-${hist.artista}"/>
+                    </h:column>
+                </h:dataTable>
+        </h:panelGrid>
+
+        <h:panelGrid columns="4" border="1">
+
+            <h:panelGrid columns="1">
+                <h:outputText value="Rock"/>
+                <h:dataTable value="${principalBean.rock}" var="rock" >
+                    <h:column>
+                        <h:outputText value="${rock.nombre}-${rock.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+
+            <h:panelGrid columns="1">
+                <h:outputText value="Pop"/>
+                <h:dataTable value="${principalBean.pop}" var="pop" >
+                    <h:column>
+                        <h:outputText value="${pop.nombre}-${pop.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+
+            <h:panelGrid columns="1">
+                <h:outputText value="Reggae"/>
+                <h:dataTable value="${principalBean.reggae}" var="reggae" >
+                    <h:column>
+                        <h:outputText value="${reggae.nombre}-${reggae.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+
+
+            <h:panelGrid columns="1">
+                <h:outputText value="Reggaeton"/>
+                <h:dataTable value="${principalBean.reggaeton}" var="reggaeton" >
+                    <h:column>
+                        <h:outputText value="${reggaeton.nombre}-${reggaeton.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+
+
+            <h:panelGrid columns="1">
+                <h:outputText value="Reggaeton"/>
+                <h:dataTable value="${principalBean.reggaeton}" var="reggaeton" >
+                    <h:column>
+                        <h:outputText value="${reggaeton.nombre}-${reggaeton.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+
+
+            <h:panelGrid columns="1">
+                <h:outputText value="Merengue"/>
+                <h:dataTable value="${principalBean.merengue}" var="merengue" >
+                    <h:column>
+                        <h:outputText value="${merengue.nombre}-${merengue.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+            
+            
+            <h:panelGrid columns="1">
+                <h:outputText value="Salsa"/>
+                <h:dataTable value="${principalBean.salsa}" var="salsa" >
+                    <h:column>
+                        <h:outputText value="${salsa.nombre}-${salsa.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+            
+            
+            <h:panelGrid columns="1">
+                <h:outputText value="Cumbia"/>
+                <h:dataTable value="${principalBean.cumbia}" var="cumbia" >
+                    <h:column>
+                        <h:outputText value="${cumbia.nombre}-${cumbia.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+
+            
+            
+            <h:panelGrid columns="1">
+                <h:outputText value="Clasica"/>
+                <h:dataTable value="${principalBean.clasica}" var="clasica" >
+                    <h:column>
+                        <h:outputText value="${clasica.nombre}-${clasica.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+            
+            
+            
+            <h:panelGrid columns="1">
+                <h:outputText value="Jazz"/>
+                <h:dataTable value="${principalBean.jazz}" var="jazz" >
+                    <h:column>
+                        <h:outputText value="${jazz.nombre}-${jazz.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+            
+            
+            <h:panelGrid columns="1">
+                <h:outputText value="Metal"/>
+                <h:dataTable value="${principalBean.metal}" var="metal" >
+                    <h:column>
+                        <h:outputText value="${metal.nombre}-${metal.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+            
+            
+            <h:panelGrid columns="1">
+                <h:outputText value="Samba"/>
+                <h:dataTable value="${principalBean.samba}" var="samba" >
+                    <h:column>
+                        <h:outputText value="${samba.nombre}-${samba.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+            
+            
+            <h:panelGrid columns="1">
+                <h:outputText value="Disco"/>
+                <h:dataTable value="${principalBean.disco}" var="disco" >
+                    <h:column>
+                        <h:outputText value="${disco.nombre}-${disco.artista}"/>
+                    </h:column>
+                </h:dataTable>
+            </h:panelGrid>
+            
+        </h:panelGrid>
+
+
+    </h:body>
+</html>

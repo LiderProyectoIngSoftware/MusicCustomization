@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>TODO supply a title</title>
+    </h:head>
+    <h:body>
+
+        <h:form>
+            <h:panelGrid columns="3">
+
+                <h:outputText value="Nombre"/>
+                <p:inputText id="nombre" required="true" label="Nombre" value="${agregarUsuario.usuario.nombre}"/>
+                <p:message for="nombre" display="icon"/>
+                <h:outputText value="Usuario"/>
+                <p:inputText id="usuario" required="true" label="Usuario" value="${agregarUsuario.usuario.usuario}"/>
+                <p:message for="usuario" display="icon"/>
+                <h:outputText value="Password"/>
+                <p:password id="password" required="true" label="Password" value="${agregarUsuario.usuario.password}"/>
+                <p:message for="password" display="icon"/>
+                <p:commandButton ajax="false" action="${agregarUsuario.guardarUsuario}" value="Guardar"/>
+
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>
