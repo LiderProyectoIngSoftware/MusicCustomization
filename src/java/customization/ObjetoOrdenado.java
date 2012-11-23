@@ -88,4 +88,13 @@ public class ObjetoOrdenado {
         this.listaGeneros = listaGeneros;
     }
 
+    public Vector2D obtenerVector2D(Object llave) {
+        for(Vector2D vec:listaGeneros){
+            if(vec.getX().equals(llave)){
+                return vec;
+            }
+        }
+        return null;
+    }
+
 }

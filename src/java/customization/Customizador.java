@@ -163,8 +163,9 @@ public class Customizador {
     private List<Cancion> obtenerSeleccionCanciones(Object llave , List<ObjetoOrdenado> cancionesOrdenadas){
         List<Cancion> cancionesFinales=new LinkedList<Cancion>();
         for(ObjetoOrdenado cancion:cancionesOrdenadas){
+            Vector2D vec = cancion.obtenerVector2D(llave);
             int pos = cancion.obtenerPosicionGenero(llave);
-            if(pos<3){
+            if(pos<3 && ((Double)vec.getY())>0.0){
                 cancionesFinales.add((Cancion)cancion.getObjeto());
             }
         }
